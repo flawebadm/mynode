@@ -12,3 +12,4 @@ pkg install openssh
 pkg install openssl openssldev
 pkg install mosquitto
 pkg install nodejs
+grep -lr "cpus()" /data/data/com.termux/files/usr/lib/node_modules
