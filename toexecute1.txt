@@ -1,0 +1,14 @@
+pkg update
+pkg upgrade
+pkg install coreutils
+pkg install openssh
+pkg install python python-dev
+pkg install python2 python2-dev
+pkg install clang make 
+pkg install ndk-stl
+pkg install libxml2-dev libffi-dev
+pkg install termux-api
+pkg install openssh
+pkg install openssl openssldev
+pkg install mosquitto
+pkg install nodejs
