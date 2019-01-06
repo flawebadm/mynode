@@ -1,15 +1,28 @@
-pkg update
-pkg upgrade
-pkg install coreutils
-pkg install openssh
-pkg install python python-dev
-pkg install python2 python2-dev
-pkg install clang make 
-pkg install ndk-stl
-pkg install libxml2-dev libffi-dev
-pkg install termux-api
-pkg install openssh
-pkg install openssl openssldev
-pkg install mosquitto
-pkg install nodejs
-grep -lr "cpus()" /data/data/com.termux/files/usr/lib/node_modules
+echo Y |pkg update
+echo Y |pkg upgrade
+df -h
+echo Y|pkg install coreutils
+df -h
+echo Y|pkg install openssh
+df -h
+echo Y|pkg install python python-dev
+df -h
+echo Y|pkg install python2 python2-dev
+df -h
+echo Y|pkg install clang make
+df -h
+echo Y|pkg install ndk-stl
+df -h
+echo Y|pkg install libxml2-dev libffi-dev
+df -h
+echo Y|pkg install termux-api
+df -h
+echo Y|pkg install openssh
+df -h
+echo Y|pkg install openssl openssldev
+df -h
+echo Y|pkg install mosquitto
+df -h
+echo Y|pkg install nodejs
+df -h
+grep -lr "cpus()" /data/data/com.termux/files/usr/lib/node_modules:wq
