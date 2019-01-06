@@ -1,0 +1,2 @@
+# mynode
+node-red intallation
