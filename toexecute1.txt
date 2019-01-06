@@ -4,6 +4,7 @@ df -h
 echo Y|pkg install coreutils
 df -h
 echo Y|pkg install openssh
+sshd
 df -h
 echo Y|pkg install python python-dev
 df -h
