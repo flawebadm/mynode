@@ -1,5 +1,7 @@
 echo Y |pkg update
 echo Y |pkg upgrade
+# df -h
+# echo Y|pkg install git
 df -h
 echo Y|pkg install coreutils
 df -h
