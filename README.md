@@ -20,7 +20,8 @@
 # some packages installed as described in a-first.script.txt
 sh -x ./toexecute1.txt
 # modify os.cpus()
-/*
+/* change all occurences of "os.cpus()" to 1 
+   =========================================
 /data/data/com.termux/files/usr/lib/node_modules/npm/node_modules/node-gyp/lib/build.js
 /data/data/com.termux/files/usr/lib/node_modules/npm/node_modules/worker-farm/README.md
 /data/data/com.termux/files/usr/lib/node_modules/npm/node_modules/worker-farm/examples/pi/index.js
