@@ -1,14 +1,23 @@
 # mynode notes by flavio flajs, 06.01.2019
-node-red intallatio
+(nodejs, mosquitto) node-red intallatio
 
 - git clone https://github.com/flawebadm/mynode.git
 
 ```bash
-# after installation of termux and termux api
-# run the commands in 
+## google android play store install:
+## termux
+## termux api
+## after installation of termux and termux api
+## settings -> app & notifications -> termux
+## permissions 
+## storage switch to on
+## start termux -> upper left corner swipe down termux icon and press "acquire wakelock"
+## run the commands in a-first.script.txt
+## connect from putty or other ssh client and continue with installation
 ```
 
 ```bash
+# some packages installed as described in a-first.script.txt
 sh -x ./toexecute1.txt
 # modify os.cpus()
 sh -x ./toexecute2.txt
