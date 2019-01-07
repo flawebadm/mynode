@@ -52,9 +52,34 @@ node-red-contrib-mqtt-dashboard
 /* not required
 npm i -g --unsafe-perm pm2
 grep -lr "cpus()" /data/data/com.termux/files/usr/lib/node_modules
+
+modify "cpus" errors for pm2:
+/data/data/com.termux/files/usr/lib/node_modules/pm2/lib/API/Extra.js
+/data/data/com.termux/files/usr/lib/node_modules/pm2/lib/God.js
+/data/data/com.termux/files/usr/lib/node_modules/pm2/lib/God/ActionMethods.js
+/data/data/com.termux/files/usr/lib/node_modules/pm2/lib/HttpInterface.js
+/data/data/com.termux/files/usr/lib/node_modules/pm2/node_modules/@pm2/agent-node/src/utils/meta.js
+/data/data/com.termux/files/usr/lib/node_modules/pm2/node_modules/@pm2/agent/src/InteractorDaemon.js
+/data/data/com.termux/files/usr/lib/node_modules/pm2/node_modules/@pm2/agent/src/push/DataRetriever.js
+
 pip install homeassistant
 grep -lr "cpus()" /data/data/com.termux/files/usr/lib/node_modules
 */
+Start at login
+pm2 start mosquitto -- -v -c /data/data/com.termux/files/usr/etc/mosquitto/mosquitto.conf
+pm2 start node-red --node-args="--max-old-space-size=128" -- -v
+pm2 start hass --interpreter=python -- --config /data/data/com.termux/files/home/.homeassistant
+pm2 save
+
+pm2 show hass
+pm2 logs hass
+
+If you make mistake in pm2 configuration…
+pm2 stop {hass or node-red...}
+pm2 delete {hass or node-red...}
+
+nano ~/.bashrc
+pm2 resurrect
 ```
 
 ```bash
