@@ -1,6 +1,8 @@
 # mynode notes by flavio flajs, 06.01.2019
 node-red intallation
 
+- git clone https://github.com/flawebadm/mynode.git
+
 ```bash
 sh -x ./toexecute1.txt
 # modify os.cpus()
