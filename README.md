@@ -36,3 +36,13 @@ grep -lr "cpus()" /data/data/com.termux/files/usr/lib/node_modules
 */
 ```
 
+```bash
+# start mosquitto
+mosquitto
+# address http://ipaddress:1883
+#
+# start node-red
+node-red
+# address http://ipaddress:1880
+#
+
