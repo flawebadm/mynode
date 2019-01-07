@@ -1,7 +1,12 @@
 # mynode notes by flavio flajs, 06.01.2019
-node-red intallation
+node-red intallatio
 
 - git clone https://github.com/flawebadm/mynode.git
+
+```bash
+# after installation of termux and termux api
+# run the commands in 
+```
 
 ```bash
 sh -x ./toexecute1.txt
