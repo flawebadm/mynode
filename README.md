@@ -20,6 +20,12 @@
 # some packages installed as described in a-first.script.txt
 sh -x ./toexecute1.txt
 # modify os.cpus()
+/*
+/data/data/com.termux/files/usr/lib/node_modules/npm/node_modules/node-gyp/lib/build.js
+/data/data/com.termux/files/usr/lib/node_modules/npm/node_modules/worker-farm/README.md
+/data/data/com.termux/files/usr/lib/node_modules/npm/node_modules/worker-farm/examples/pi/index.js
+/data/data/com.termux/files/usr/lib/node_modules/npm/node_modules/worker-farm/lib/farm.js
+*/
 sh -x ./toexecute2.txt
 # modify os.cpus()
 ```
