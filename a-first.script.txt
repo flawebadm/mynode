@@ -6,8 +6,11 @@ df -h
 echo Y|pkg install coreutils
 df -h
 echo Y|pkg install openssh
+# start ssh daemon (default port 8022)
 sshd
-#
+# change termux user password
 passwd
 enter-some-termux-password
 repeat-some-termux-password
+# show ip address
+ifconfig
