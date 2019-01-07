@@ -1,4 +1,4 @@
-# mynode notes by flavio flajs
+# mynode notes by flavio flajs, 06.01.2019
 node-red intallation
 
 sh -x ./toexecute1.txt
