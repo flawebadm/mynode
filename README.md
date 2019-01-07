@@ -1,5 +1,5 @@
 # mynode notes by flavio flajs, 06.01.2019
-(nodejs, mosquitto) node-red intallatio
+(nodejs, mosquitto) node-red intallation on termux
 
 - git clone https://github.com/flawebadm/mynode.git
 
