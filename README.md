@@ -1,10 +1,12 @@
 # mynode notes by flavio flajs, 06.01.2019
 node-red intallation
 
-  sh -x ./toexecute1.txt
-  modify os.cpus()
-  sh -x ./toexecute2.txt
-  modify os.cpus()
+```bash
+sh -x ./toexecute1.txt
+# modify os.cpus()
+sh -x ./toexecute2.txt
+# modify os.cpus()
+```
 
 pkg install mosquitto
 pkg install nodejs
