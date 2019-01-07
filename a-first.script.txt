@@ -1,0 +1,13 @@
+echo Y |pkg update
+echo Y |pkg upgrade
+df -h
+echo Y|pkg install git
+df -h
+echo Y|pkg install coreutils
+df -h
+echo Y|pkg install openssh
+sshd
+#
+passwd
+enter-some-termux-password
+repeat-some-termux-password
