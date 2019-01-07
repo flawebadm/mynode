@@ -59,6 +59,7 @@ mosquitto
 node-red
 # address http://ipaddress:1880
 #
+```
 
 ```bash
 /* termux-api contribution error
@@ -75,4 +76,3 @@ comment out line 150: /* changed by ff: fs.unlink(photoFile); */
 start node-red
 */
 ```
-*/
