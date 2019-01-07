@@ -60,3 +60,19 @@ node-red
 # address http://ipaddress:1880
 #
 
+```bash
+/* termux-api contribution error
+Command: termux-camera-photo [ '-c', '1', '/data/data/com.termux/files/home/tmp_photo.jpg' ]
+7 Jan 09:31:40 - [red] Uncaught Exception:
+7 Jan 09:31:40 - TypeError [ERR_INVALID_CALLBACK]: Callback must be a function
+    at makeCallback (fs.js:143:11)
+    at Object.unlink (fs.js:961:14)
+    at fs.readFile (/data/data/com.termux/files/home/.node-red/node_modules/node-red-contrib-termux-api/index.js:150:18)
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:53:3)
+*/
+/* (stop mode-red if not crashed) modify file  /data/data/com.termux/files/home/.node-red/node_modules/node-red-contrib-termux-api/index.js
+comment out line 150: /* changed by ff: fs.unlink(photoFile); */
+start node-red
+*/
+```
+*/
