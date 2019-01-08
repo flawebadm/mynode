@@ -129,3 +129,49 @@ vi $HOME/.node-red/settings.js (ca line 130)
     //    }]
     //},
 ```
+
+bash```
+$ cat start.sh
+# ff, 2019-01-08
+#
+# sshd
+#
+CNT=$(ps -ef | grep  ' sshd$' | wc -l)
+if [ $CNT -gt 0 ]
+then
+        echo "sshd is running."
+else
+        echo "sshd is not running, starting ..."
+        cd $HOME/start/sshd
+        sshd &
+        echo "sshd started."
+fi
+#
+# mosquitto
+#
+CNT=$(ps -ef | grep  ' mosquitto$' | wc -l)
+if [ $CNT -gt 0 ]
+then
+        echo "mosquitto is running."
+else
+        echo "mosquitto is not running, starting ..."
+        cd $HOME/start/mosquitto
+        nohup mosquitto &
+        echo "mosquitto started."
+fi
+#
+# node-red
+#
+CNT=$(ps -ef | grep  ' node-red$' | wc -l)
+if [ $CNT -gt 0 ]
+then
+        echo "node-red is running."
+else
+        echo "node-red is not running, starting ..."
+        cd $HOME/start/node-red
+        nohup node-red &
+        echo "node-red started."
+fi
+#
+cd $HOME
+```
