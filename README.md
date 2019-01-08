@@ -129,8 +129,7 @@ vi $HOME/.node-red/settings.js (ca line 130)
     //    }]
     //},
 ```
-
-bash```
+```bash
 $ cat start.sh
 # ff, 2019-01-08
 #
