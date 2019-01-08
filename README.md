@@ -115,7 +115,7 @@ npm install -g node-red-admin
 # generate hassh passwd
 node-red-admin hash-pw
 # edit settings.js
-vi $HOME/.node-red/settings.js
+vi $HOME/.node-red/settings.js (ca line 130)
     // Securing Node-RED
     // -----------------
     // To password protect the Node-RED editor and admin API, the following
@@ -128,4 +128,4 @@ vi $HOME/.node-red/settings.js
     //        permissions: "*"
     //    }]
     //},
-'''
+```
