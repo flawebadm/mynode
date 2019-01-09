@@ -42,6 +42,20 @@ grep -lr "cpus()" /data/data/com.termux/files/usr/lib/node_modules
 ```
 
 ```bash
+# mosquitto password
+# cd /data/data/com.termux/files/usr/etc/mosquitto
+# create txt file (name.txt):
+name:password
+[name1.password1
+...]
+# encrypt
+mosquitto_passwd -U name.txt
+# modify /data/data/com.termux/files/usr/etc/mosquitto/mosquitto.conf
+allow_anonymous false
+password_file /data/data/com.termux/files/usr/etc/mosquitto/name.txt
+```
+
+```bash
 /* contribute package */
 node-red-contrib-termux-api
 node-red-contrib-mqtt-broker
@@ -83,6 +97,9 @@ pm2 resurrect
 ```
 
 ```bash
+# # # # # # #
+# secure with user/passwd mosquitto & node-red
+# # # # # # # 
 # start mosquitto
 mosquitto
 # address http://ipaddress:1883
