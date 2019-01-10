@@ -11,6 +11,8 @@
 ## settings -> app & notifications -> termux
 ## permissions 
 ## storage switch to on
+## settings -> app & notification -> termux API
+## grant all
 ## start termux -> upper left corner swipe down termux icon and press "acquire wakelock"
 ## run the commands in a-first.script.txt
 ## connect from putty or other ssh client and continue with installation
