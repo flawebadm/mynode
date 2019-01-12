@@ -1,7 +1,5 @@
-# mynode notes by flavio flajs, 06.01.2019
-(nodejs, mosquitto) node-red intallation on termux
-
-- git clone https://github.com/flawebadm/mynode.git
+# mynode: notes by flavio flajs, 06.01.2019
+nodejs, mosquitto and node-red intallation on termux
 
 ```bash
 # Google Play Store
