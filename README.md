@@ -41,6 +41,7 @@ pkg upgrade
 pkg install git
 # get "mynode" scripts
 git clone https://github.com/flawebadm/mynode.git
+chmod +x mynode/*.sh
 # install and configure scripts in new directory mynode
 ```
 
@@ -213,9 +214,14 @@ start node-red
 ```
 
 ```bash
-############################## öld #################################
-############################## öld #################################
-############################## öld #################################
+# create/update bashrc
+vi $HOME/.bashrc
+alias ls="ls --color=never"
+$HOME/mynode/script40.sh
+```
+############################## end #################################
+############################## end #################################
+############################## end #################################
 ```
 
 ```bash
