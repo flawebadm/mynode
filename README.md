@@ -23,17 +23,52 @@
 pkg update
 pkg upgrade
 pkg install openssh
-# start ssh daemon
+# start ssh daemon (default püort 8022)
 sshd
-# get user info
+# get user name (and user id info)
 id
 # change password
 passwd
 # get your ip address
 ifconfig
 # continue with Termux terminal or connect to Termux session with putty or other ssh client.
+# connect command:
+# ssh -p 8022 yourUser@yourIP
 ```
 
+```bash
+# continue with ionstallations
+pkg update
+pkg upgrade 
+pkg install git
+# get "mynode" scripts
+git clone https://github.com/flawebadm/mynode.git
+# install and configure scripts in new directory mynode
+```
+
+```bash
+#ff#
+#ff# script10.sh
+#ff#
+
+echo Y |pkg update
+echo Y |pkg upgrade
+echo Y|pkg install coreutils
+echo Y|pkg install python python-dev
+echo Y|pkg install python2 python2-dev
+echo Y|pkg install clang make
+echo Y|pkg install ndk-stl
+echo Y|pkg install libxml2-dev libffi-dev
+echo Y|pkg install termux-api
+echo Y|pkg install openssh
+echo Y|pkg install openssl openssldev
+echo Y|pkg install mosquitto
+echo Y|pkg install nodejs
+echo "############################################################"
+echo "modify files which uses os function cpus()"
+echo "############################################################"
+grep -lr "cpus()" /data/data/com.termux/files/usr/lib/node_modules
+```
 
 ```bash
 ## google android play store install:
