@@ -50,7 +50,6 @@ git clone https://github.com/flawebadm/mynode.git
 #ff#
 #ff# script10.sh
 #ff#
-
 echo Y |pkg update
 echo Y |pkg upgrade
 echo Y|pkg install coreutils
@@ -68,6 +67,128 @@ echo "############################################################"
 echo "modify files which uses os function cpus()"
 echo "############################################################"
 grep -lr "cpus()" /data/data/com.termux/files/usr/lib/node_modules
+```
+
+```bash
+#ff#
+#ff# script20.sh
+#ff#
+npm i -g --unsafe-perm node-red
+grep -lr "cpus()" /data/data/com.termux/files/usr/lib/node_modules
+```
+
+```bash
+#ff#
+#ff# script30.sh
+#ff#
+mkdir -p $HOME/start
+mkdir -p $HOME/start/sshd
+mkdir -p $HOME/start/mosquitto
+mkdir -p $HOME/start/node-red
+#
+# start mosquitto
+cd $HOME/start/mosquitto
+nohup mosquitto &
+# start node-red
+$HOME/start/node-red
+nohup node-red &
+#
+cd $HOME
+```
+
+```bash
+# security
+# stop modsquitto
+pkill mosquitto
+# stop node-red
+pkill node-red
+#
+# mosquitto password
+# cd /data/data/com.termux/files/usr/etc/mosquitto
+# create txt file (name.txt):
+name:password
+[name1.password1
+...]
+# encrypt
+mosquitto_passwd -U name.txt
+# modify /data/data/com.termux/files/usr/etc/mosquitto/mosquitto.conf
+allow_anonymous false
+password_file /data/data/com.termux/files/usr/etc/mosquitto/name.txt
+# encrypt
+mosquitto_passwd -U name.txt
+# modify /data/data/com.termux/files/usr/etc/mosquitto/mosquitto.conf
+allow_anonymous false
+password_file /data/data/com.termux/files/usr/etc/mosquitto/name.txt
+# node-red password
+# install node-red-admin
+npm install -g node-red-admin
+# generate hash passwd
+node-red-admin hash-pw
+# edit settings.js
+vi $HOME/.node-red/settings.js (ca line 130)
+    // Securing Node-RED
+    // -----------------
+    // To password protect the Node-RED editor and admin API, the following
+    // property can be used. See http://nodered.org/docs/security.html for details.
+    //adminAuth: {
+    //    type: "credentials",
+    //    users: [{
+    //        username: "admin",
+    //        password: "$2a$08$zZWtXTja0fB1pzD4sHCMyOCMYz2Z6dNbM6tl8sJogENOMcxWV9DN.",
+    //        permissions: "*"
+    //    }]
+    //},
+```
+
+```bash
+# script40.sh
+#
+# start sshd
+#
+CNT=$(ps -ef | grep  ' sshd$' | wc -l)
+if [ $CNT -gt 0 ]
+then
+        echo "sshd is running."
+else
+        echo "sshd is not running, starting ..."
+        cd $HOME/start/sshd
+        sshd &
+        echo "sshd started."
+fi
+#
+# srtart mosquitto
+#
+CNT=$(ps -ef | grep  ' mosquitto$' | wc -l)
+if [ $CNT -gt 0 ]
+then
+        echo "mosquitto is running."
+else
+        echo "mosquitto is not running, starting ..."
+        cd $HOME/start/mosquitto
+        nohup mosquitto &
+        echo "mosquitto started."
+fi
+#
+# start node-red
+#
+CNT=$(ps -ef | grep  ' node-red$' | wc -l)
+if [ $CNT -gt 0 ]
+then
+        echo "node-red is running."
+else
+        echo "node-red is not running, starting ..."
+        cd $HOME/start/node-red
+        nohup node-red &
+        echo "node-red started."
+fi
+#
+cd $HOME
+```
+
+```bash
+############################## öld #################################
+############################## öld #################################
+############################## öld #################################
 ```
 
 ```bash
@@ -198,7 +319,7 @@ start node-red
 ```bash
 # install
 npm install -g node-red-admin
-# generate hassh passwd
+# generate hash passwd
 node-red-admin hash-pw
 # edit settings.js
 vi $HOME/.node-red/settings.js (ca line 130)
