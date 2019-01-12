@@ -6,7 +6,7 @@
 ```bash
 # Google Play Store
 # Install Termux https://play.google.com/store/apps/details?id=com.termux&hl=en
-# Install Termux:APIps://play.google.com/store/apps/details?id=com.termux.api
+# Install Termux:API https://play.google.com/store/apps/details?id=com.termux.api
 # Add Privileges:
 # 1. Termux
 # Settings->Apps & notification->Termux->Permissions:
@@ -17,6 +17,23 @@
 # Start Termux
 # Swipe down Termux icon on left upper corner and touch "ACQUIRE WAKELOCK"
 ```
+
+```bash
+# Termux terminal window
+pkg update
+pkg upgrade
+pkg install openssh
+# start ssh daemon
+sshd
+# get user info
+id
+# change password
+passwd
+# get your ip address
+ifconfig
+# continue with Termux terminal or connect to Termux session with putty or other ssh client.
+```
+
 
 ```bash
 ## google android play store install:
