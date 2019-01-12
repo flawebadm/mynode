@@ -192,6 +192,8 @@ node-red-contrib-ifttt
 node-red-contrib-smartplug
 node-red-contrib-termux-api
 node-red-dashboard
+# stop node-red
+pkill node-red
 ```
 
 ```bash
