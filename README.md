@@ -4,6 +4,21 @@
 - git clone https://github.com/flawebadm/mynode.git
 
 ```bash
+# Google Play Store
+# Install Termux https://play.google.com/store/apps/details?id=com.termux&hl=en
+# Install Termux:APIps://play.google.com/store/apps/details?id=com.termux.api
+# Add Privileges:
+# 1. Termux
+# Settings->Apps & notification->Termux->Permissions:
+# Storage 
+# 2. Termux:API
+# Settings->Apps & notification->Termux:API->Permissions:
+# Camera, Contacts, Location, Microphone, SMS, Telephone
+# Start Termux
+# Swipe down Termux icon on left upper corner and touch "ACQUIRE WAKELOCK"
+```
+
+```bash
 ## google android play store install:
 ## termux
 ## termux api
