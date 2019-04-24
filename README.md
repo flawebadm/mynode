@@ -200,7 +200,7 @@ cd $HOME
 
 ```bash
 # chrome web browswe
-your-IP-address:1180
+your-IP-address:1880
 # manage palette
 node-red-contrib-firebase
 node-red-contrib-ifttt
