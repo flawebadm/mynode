@@ -15,8 +15,9 @@ nodejs, mosquitto and node-red intallation on termux
 # Start Termux
 # Swipe down Termux icon on left upper corner and touch "ACQUIRE WAKELOCK"
 ```
-# termux terminal window scikit-learn new!
+
 ```bash
+# termux terminal window scikit-learn new!
 pkg install python wget proot clang python-dev fftw libzmq libzmq-dev freetype freetype-dev libpng libpng-dev pkg-config 
 wget https://its-pointless.github.io/setup-pointless-repo.sh
 bash setup-pointless-repo.sh
@@ -24,7 +25,8 @@ pkg update
 pkg install numpy scipy
 termux-chroot
 pip install --upgrade pip
-pip install scikit-learn==0.19.2
+#ff#pip install scikit-learn==0.19.2
+pip install scikit-learn
 ```
 
 ```bash
