@@ -68,7 +68,8 @@ echo Y|pkg install coreutils
 echo Y|pkg install python python-dev
 #ff# echo Y|pkg install python2 python2-dev
 echo Y|pkg install clang make
-echo Y|pkg install ndk-stl
+##ff# echo Y|pkg install ndk-stl
+##ff## ndk-sysroot/stable,now 19b-3 arm [installed,automatic]
 echo Y|pkg install libxml2-dev libffi-dev
 echo Y|pkg install termux-api
 echo Y|pkg install openssh
