@@ -103,7 +103,7 @@ mkdir -p $HOME/start/node-red
 cd $HOME/start/mosquitto
 nohup mosquitto &
 # start node-red
-$HOME/start/node-red
+cd $HOME/start/node-red
 nohup node-red &
 #
 cd $HOME
