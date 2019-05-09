@@ -123,7 +123,8 @@ name:password
 [name1.password1
 ...]
 # encrypt
-mosquitto_passwd -U name.txt
+# -U obsolette? # mosquitto_passwd -U name.txt
+mosquitto_passwd -c name.txt admin
 # modify /data/data/com.termux/files/usr/etc/mosquitto/mosquitto.conf
 allow_anonymous false
 password_file /data/data/com.termux/files/usr/etc/mosquitto/name.txt
