@@ -15,10 +15,14 @@ nodejs, mosquitto and node-red intallation on termux
 # Start Termux
 # Swipe down Termux icon on left upper corner and touch "ACQUIRE WAKELOCK"
 ```
+```bash
+# Ignore all errors for "*-dev" packages!
+```
 
 ```bash
 # termux terminal window scikit-learn new!
 pkg install python wget proot clang python-dev fftw libzmq libzmq-dev freetype freetype-dev libpng libpng-dev pkg-config 
+pkg install wget
 wget https://its-pointless.github.io/setup-pointless-repo.sh
 bash setup-pointless-repo.sh
 pkg update
@@ -26,6 +30,7 @@ pkg install numpy scipy
 termux-chroot
 pip install --upgrade pip
 #ff#pip install scikit-learn==0.19.2
+pip install Cython
 pip install scikit-learn
 ```
 
@@ -51,6 +56,8 @@ ifconfig
 # continue with ionstallations
 pkg update
 pkg upgrade 
+# privileges on sd-card (external storage)
+termux-setup-storage
 pkg install git
 # get "mynode" scripts
 git clone https://github.com/flawebadm/mynode.git
@@ -232,6 +239,7 @@ start node-red
 # create/update bashrc
 vi $HOME/.bashrc
 alias ls="ls --color=never"
+termux-wake-lock
 $HOME/mynode/script40.sh
 ```
 ############################## end #################################
