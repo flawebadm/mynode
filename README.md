@@ -244,6 +244,26 @@ pip install Cython
 pip install scikit-learn
 pip install jupyter
 pip install jupyterlab
+# jupyter public serverjupyter_notebook_config.py
+jupyter-notebook --generate-config
+jupyter notebook password
+cd /data/data/com.termux/files/home/.jupyter
+pkg install openssl-tool
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mykey.key -out mycert.pem
+cat jupyter_notebook_config.json
+# copy password
+vi jupyter_notebook_config.py
+# change
+#c.NotebookApp.certfile = u'/data/data/com.termux/files/home/.jupyter/mycert.pem'
+#c.NotebookApp.ip = '*'
+#c.NotebookApp.keyfile = u'/data/data/com.termux/files/home/.jupyter/mykey.key'
+#c.NotebookApp.open_browser = False
+#c.NotebookApp.password = u'sha1:0bd296254029:7a154a6a03c09b329bf92b53b61a6b6d7636b2aa'
+#c.NotebookApp.port = 9999
+# start notebook
+jupyter notebook
+# open with browser:
+# https://ip:portnumber
 ```
 
 ############################## end #################################
