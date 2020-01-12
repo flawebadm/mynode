@@ -242,6 +242,25 @@ alias ls="ls --color=never"
 termux-wake-lock
 $HOME/mynode/script40.sh
 ```
+
+```bash
+# termux terminal window scikit-learn & jupyter new!
+pkg install python wget proot clang python-dev fftw libzmq libzmq-dev freetype freetype-dev libpng libpng-dev pkg-config 
+pkg install wget
+wget https://its-pointless.github.io/setup-pointless-repo.sh
+bash setup-pointless-repo.sh
+pkg update
+pkg install numpy scipy
+termux-chroot
+pkg install libzmq
+pip install --upgrade pip
+#ff#pip install scikit-learn==0.19.2
+pip install Cython
+pip install scikit-learn
+pip install jupyter
+pip install jupyterlab
+```
+
 ############################## end #################################
 ############################## end #################################
 ############################## end #################################
