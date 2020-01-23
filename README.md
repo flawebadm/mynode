@@ -231,8 +231,9 @@ $HOME/mynode/script40.sh
 
 ```bash
 # termux terminal window scikit-learn & jupyter new!
-pkg install python wget proot clang python-dev fftw libzmq libzmq-dev freetype freetype-dev libpng libpng-dev pkg-config 
-pkg install wget
+## pkg install python wget proot clang python-dev fftw libzmq libzmq-dev freetype freetype-dev libpng libpng-dev pkg-config 
+pkg install python wget proot clang fftw libzmq freetype libpng pkg-config 
+## pkg install wget
 wget https://its-pointless.github.io/setup-pointless-repo.sh
 bash setup-pointless-repo.sh
 pkg update
