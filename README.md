@@ -88,6 +88,7 @@ grep -lr "cpus()" /data/data/com.termux/files/usr/lib/node_modules
 #ff#
 mkdir -p $HOME/start
 mkdir -p $HOME/start/sshd
+mkdir -p $HOME/start/jupyter
 mkdir -p $HOME/start/mosquitto
 mkdir -p $HOME/start/node-red
 #
