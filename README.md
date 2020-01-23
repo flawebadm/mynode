@@ -244,8 +244,12 @@ pip install --upgrade pip
 #ff#pip install scikit-learn==0.19.2
 pip install Cython
 pip install scikit-learn
+## scikit-learn problem: ImportError: This platform lacks a functioning sem_open implementation, therefore, the required synchronization primitives needed will not function, see issue 3770.
+
 pip install jupyter
 pip install jupyterlab
+pip install pandas
+pip install matplotlib
 # jupyter public serverjupyter_notebook_config.py
 jupyter-notebook --generate-config
 jupyter notebook password
