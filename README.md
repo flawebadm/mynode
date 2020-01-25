@@ -15,16 +15,13 @@ nodejs, mosquitto and node-red intallation on termux
 # Start Termux
 # Swipe down Termux icon on left upper corner and touch "ACQUIRE WAKELOCK"
 ```
-```bash
-# Ignore all errors for "*-dev" packages!
-```
 
 ```bash
 # Termux terminal window
 pkg update
 pkg upgrade
 pkg install openssh
-# start ssh daemon (default püort 8022)
+# start ssh daemon (default port 8022)
 sshd
 # get user name (and user id info)
 id
@@ -57,15 +54,15 @@ chmod +x mynode/*.sh
 echo Y |pkg update
 echo Y |pkg upgrade
 echo Y|pkg install coreutils
-echo Y|pkg install python python-dev
+echo Y|pkg install python
 #ff# echo Y|pkg install python2 python2-dev
 echo Y|pkg install clang make
 ##ff# echo Y|pkg install ndk-stl
 ##ff## ndk-sysroot/stable,now 19b-3 arm [installed,automatic]
-echo Y|pkg install libxml2-dev libffi-dev
+echo Y|pkg install libxml2
 echo Y|pkg install termux-api
 echo Y|pkg install openssh
-echo Y|pkg install openssl openssldev
+echo Y|pkg install openssl
 echo Y|pkg install mosquitto
 echo Y|pkg install nodejs
 echo "############################################################"
