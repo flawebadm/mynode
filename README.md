@@ -248,7 +248,7 @@ pip install jupyterlab
 pip install pandas
 pip install matplotlib
 pip install seaborn
-pip install bs4
+pip install beautifulsoup4
 # jupyter public serverjupyter_notebook_config.py
 jupyter-notebook --generate-config
 jupyter notebook password
