@@ -119,10 +119,10 @@ mosquitto_passwd -c name.txt admin
 allow_anonymous false
 password_file /data/data/com.termux/files/usr/etc/mosquitto/name.txt
 # encrypt
-mosquitto_passwd -U name.txt
-# modify /data/data/com.termux/files/usr/etc/mosquitto/mosquitto.conf
-allow_anonymous false
-password_file /data/data/com.termux/files/usr/etc/mosquitto/name.txt
+## mosquitto_passwd -U name.txt
+## # modify /data/data/com.termux/files/usr/etc/mosquitto/mosquitto.conf
+## allow_anonymous false
+## password_file /data/data/com.termux/files/usr/etc/mosquitto/name.txt
 # node-red password
 # install node-red-admin
 npm install -g node-red-admin
@@ -247,6 +247,8 @@ pip install jupyter
 pip install jupyterlab
 pip install pandas
 pip install matplotlib
+pip install seaborn
+pip install bs4
 # jupyter public serverjupyter_notebook_config.py
 jupyter-notebook --generate-config
 jupyter notebook password
